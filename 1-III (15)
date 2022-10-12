@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "rus");
+	int a;
+	cout << "Введите трехзначное число ";
+	cin >> a;
+	int b = (a / 10) % 10; //вторая цифра
+	int c = a % 10; //последняя цифра
+	if (b > c) {
+		cout << "Вторая цифра больше последней ";
+	}
+	else {
+		cout << "Последняя цифра больше второй ";
+	}
+	return 0;
+}
