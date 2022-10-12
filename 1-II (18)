@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "rus");
+	cout << fixed << setprecision(10);
+	int a;
+	cout << "Введите сторону треугольника ";
+	cin >> a;
+	cout << "Радиус окружности, описанной около равностороннего треульника со стороной a " << (sqrt(3) * a) / 3;
+	return 0;
+}
