@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double kv(double q) {
+	return pow(q, 2);
+}
+
+int main() {
+	double a, b, h, y;
+	cin >> a >> b >> h;
+	while(a <= b) {
+		y = 1 / (kv(a) - 1);
+		if (a == 1)
+			cout << a << " error" << endl;
+		else
+			cout << a << ' ' << y << endl;
+		a += h;
+	}
+	return 0;
+}
