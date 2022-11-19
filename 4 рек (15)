@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	float b1 = 1, b2 = 2, b;
+	int n;
+	cin >> n;
+	cout << "1 " << b1 << endl;
+	cout << "2 " << b2 << endl;
+	for (int i = 3; i <= n; i++) {
+		b = (b1 / 4.0) + (5.0 / (pow(b2, 2)));
+		cout << i << " " << b << endl;
+		b1 = b2;
+		b2 = b;
+	}
+	return 0;
+}
