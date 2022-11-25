@@ -10,7 +10,7 @@ int main() {
 	double a, b, h, y;
 	cin >> a >> b >> h;
 	while (a <= b) {
-		if (a == 1)
+		if (a*a == 1)
 			cout << a << " error" << endl;
 		else
 			cout << a << " " << f(a) << endl;
