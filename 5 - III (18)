@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int i = 1;
+	double e, s = 0;
+	double a = -(1. / (2 * 2));
+	cin >> e;
+	while (abs(a) >= e) {
+		s += a;
+		i++;
+		a = -(a/(2*2));
+	}
+	cout << s;
+	return 0;
+}
