@@ -2,19 +2,18 @@
 #include <cmath>
 using namespace std;
 
-double kv(double q) {
-	return pow(q, 2);
+double f(double q) {
+	return 1/((q*q)-1);
 }
 
 int main() {
 	double a, b, h, y;
 	cin >> a >> b >> h;
-	while(a <= b) {
-		y = 1 / (kv(a) - 1);
+	while (a <= b) {
 		if (a == 1)
 			cout << a << " error" << endl;
 		else
-			cout << a << ' ' << y << endl;
+			cout << a << " " << f(a) << endl;
 		a += h;
 	}
 	return 0;
