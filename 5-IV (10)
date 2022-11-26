@@ -1,0 +1,33 @@
+#define _USE_MATH_DEFINES
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+double fu(double x, double e, int& n) {
+	int i = 1;
+	double p = -M_PI_2, a = -1 / (i * pow(x, i));
+	double s = p;
+	n = 0;
+	while (abs(a) >= e) {
+		s += a;
+		a *= -(i / (i*pow(x,2) + 2 * pow(x,2)));
+		i+=2;
+		n++;
+	}
+	return s;
+}
+
+int main() {
+	cout << setprecision(4);
+	double e, f, h = 0.1;
+	double a = -3, b = -2;
+	int n, y;
+	cin >> e;
+	cout << "i\t x\t f(x)\t n\n";
+	for (double x = a,y = 1; x <= b; x+=h, y++){
+		f = fu(x, e, n);
+		cout << y << "\t" << x << "\t" << f << "\t " << n << endl;
+	}
+	return 0;
+}
