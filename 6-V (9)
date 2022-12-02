@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n, c, x,z = -1;
+	cin >> n >> c >> x;
+	int* a = new int [2*n];
+
+	for (int i = 0; i < n; i++) {
+		cin >> a[i];
+	}
+
+	for (int i = 0; i < n; i++) {
+		if (a[i] % 10 == c) {
+			z = i + 1;
+			for (int i = n; i > z; i--) {
+				a[i] = a[i - 1];
+			}
+			a[z] = x;
+			n++;
+		}
+	}
+
+	cout << endl;
+	for (int i = 0; i < n; i++) {
+		cout << a[i] << " ";
+	}
+
+	return 0;
+}
