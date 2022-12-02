@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int del(int&x){
+int del(int x){
     int k = 0;
     for(int i = 1;i<=x;i++){
         if(x%i==0){
