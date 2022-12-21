@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	string s;
+	getline(cin, s);
+	s.insert(0, 1, ' ');
+	for (int i = 1; i < s.length(); i++) {
+		if (s[i - 1] == ' ' && s[i] >= char(97) && s[i] <= char(122)) {
+			s[i] -= 32;
+		}
+	}
+	s.erase(0, 1);
+	cout << s;
+}
